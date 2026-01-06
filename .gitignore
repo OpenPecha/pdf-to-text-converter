@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Google OAuth client secrets
+src/pdftotext/credential.json
+src/pdftotext/book.pdf
+src/pdftotext/token.pickle
+src/pdftotext/output.txt
