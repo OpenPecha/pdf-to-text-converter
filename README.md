@@ -8,15 +8,12 @@
   <br>
 </h1>
 
-## _Project Name_
-_The project name should match its code's capability so that new users can easily understand what it does._
+## PDF to Text Converter (via Google Drive API)
+This tool leverages Google Drive's built-in OCR and document conversion capabilities to extract text from PDFs
 
 ## Owner(s)
 
 _Change to the owner(s) of the new repo. (This template's owners are:)_
-- [@ngawangtrinley](https://github.com/ngawangtrinley)
-- [@mikkokotila](https://github.com/mikkokotila)
-- [@evanyerburgh](https://github.com/evanyerburgh)
 
 
 ## Table of contents
@@ -35,107 +32,60 @@ _Change to the owner(s) of the new repo. (This template's owners are:)_
 ## Project description
 _Use one of these:_
 
-With _Project Name_ you can _verb_ _noun_...
+PDF to Text Converter is a Python utility that automates the process of extracting text from ```.pdf``` files.
+It uploads the PDF to Google Drive, converts it into a Google Document, and then exports the result as a ```.txt``` file.
 
-_Project Name_ helps you _verb_ _noun_...
+This project helps you:
+
+- Convert ```.pdf``` into editable ```.txt``` files.
 
 
 ## Who this project is for
-This project is intended for _target user_ who wants to _user objective_.
+This project is intended for user who wants to convert ```.pdf``` file to ```.txt``` file.
 
 
 ## Project dependencies
-Before using _Project Name_, ensure you have:
-* python _version_
-* _Prerequisite 2_
-* _Prerequisite 3..._
+Before using PDF to Text Converter, ensure you have:
+* python versionn >= 3.8
+* A Google Cloud Platform (GCP) project with the Google Drive API enabled.
+* A credential.json file (OAuth 2.0 Client ID) from your GCP project.
 
 
 ## Instructions for use
-Get started with _Project Name_ by _(write the first step a user needs to start using the project. Use a verb to start.)_.
+### Install PDF to Text Converter
 
 
-### Install _Project Name_
-1. _Write the step here._ 
+1. Set up Google Cloud Credentials
+    1. Go to the Google Cloud Console.
+    2. Create a new project or select an existing one.
+    3. Enable the Google Drive API.
+    4. Navigate to APIs & Services > Credentials.
+    5. Create OAuth 2.0 Client IDs (application type: Desktop App).
+    6. Download the JSON file, rename it to credential.json
 
-    _Explanatory text here_ 
-    
-    _(Optional: Include a code sample or screenshot that helps your users complete this step.)_
+2. Install Dependencies
+   1. Run the following command to install the required Python libraries: 
 
-2. _Write the step here._
- 
-    a. _Substep 1_ 
-    
-    b. _Substep 2_
+```bash
+pip install google-api-python-client google-auth-oauthlib requests
+```
 
+3. Run the Converter
+  - Run the main.py script and pass the path to your PDF as an argument.
+```bash
+python main.py path/to/your/document.pdf
+```
 
-### Configure _Project Name_
-1. _Write the step here._
-2. _Write the step here._
+The script will:
 
+1. Open a browser window for you to log in to your Google account (first time only).
+2. Upload file_name.pdf.
+3. Create a new file named output.txt containing the extracted text.
 
-### Run _Project Name_
-1. _Write the step here._
-2. _Write the step here._
-
-
-### Troubleshoot _Project Name_
-1. _Write the step here._
-2. _Write the step here._
-
-<table>
-  <tr>
-   <td>
-    Issue
-   </td>
-   <td>
-    Solution
-   </td>
-  </tr>
-  <tr>
-   <td>
-    _Describe the issue here_
-   </td>
-   <td>
-    _Write solution here_
-   </td>
-  </tr>
-  <tr>
-   <td>
-    _Describe the issue here_
-   </td>
-   <td>
-    _Write solution here_
-   </td>
-  </tr>
-  <tr>
-   <td>
-    _Describe the issue here_
-   </td>
-   <td>
-    _Write solution here_
-   </td>
-  </tr>
-</table>
-
-
-Other troubleshooting supports:
-* _Link to FAQs_
-* _Link to runbooks_
-* _Link to other relevant support information_
 
 
 ## Contributing guidelines
 If you'd like to help out, check out our [contributing guidelines](/CONTRIBUTING.md).
-
-
-## Additional documentation
-_Include links and brief descriptions to additional documentation._
-
-For more information:
-* [Reference link 1](#)
-* [Reference link 2](#)
-* [Reference link 3](#)
 
 
 ## How to get help
@@ -145,4 +95,4 @@ For more information:
 
 
 ## Terms of use
-_Project Name_ is licensed under the [MIT License](/LICENSE.md).
+PDF to Text Converter is licensed under the [MIT License](/LICENSE.md).
