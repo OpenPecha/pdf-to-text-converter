@@ -30,7 +30,6 @@ _Change to the owner(s) of the new repo. (This template's owners are:)_
 <hr>
 
 ## Project description
-_Use one of these:_
 
 PDF to Text Converter is a Python utility that automates the process of extracting text from ```.pdf``` files.
 It uploads the PDF to Google Drive, converts it into a Google Document, and then exports the result as a ```.txt``` file.
@@ -64,7 +63,7 @@ Before using PDF to Text Converter, ensure you have:
     6. Download the JSON file, rename it to credential.json
 
 2. Install Dependencies
-   1. Run the following command to install the required Python libraries: 
+- Run the following command to install the required Python libraries: 
 
 ```bash
 pip install google-api-python-client google-auth-oauthlib requests
@@ -79,8 +78,8 @@ python main.py path/to/your/document.pdf
 The script will:
 
 1. Open a browser window for you to log in to your Google account (first time only).
-2. Upload file_name.pdf.
-3. Create a new file named output.txt containing the extracted text.
+2. Upload ```file_name.pdf```.
+3. Create a new file named ```output.txt``` containing the extracted text.
 
 
 
